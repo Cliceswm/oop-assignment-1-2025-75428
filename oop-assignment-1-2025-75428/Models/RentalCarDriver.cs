@@ -12,43 +12,43 @@ namespace oop_assignment_1_2025_75428.Models;
         Console.WriteLine("=== RENTAL CAR SYSTEM DEMO ===");
         Console.WriteLine();
 
-        // Create RentalCar objects using different constructors
+        
         RentalCar car1 = new RentalCar("Toyota", "Camry", "Saloon", "ABC-123", 75.50, false);
         RentalCar car2 = new RentalCar("Honda", "Civic", "HatchBack", "XYZ-789", 65.00);
         RentalCar car3 = new RentalCar("Ford", "Mustang", "Convertible", "MUS-001", 120.00, true);
         RentalCar car4 = new RentalCar("Nissan", "Qashqai", "CrossOver"); // Using 3-parameter constructor
 
-        // Display all cars
+        
         Console.WriteLine("Initial Car Details:");
         car1.Display();
         car2.Display();
         car3.Display();
         car4.Display();
 
-        // Test borrow method
+       
         Console.WriteLine("Testing Borrow Method:");
-        car1.Borrow();  // Should succeed
-        car1.Borrow();  // Should fail (already borrowed)
-        car3.Borrow();  // Should fail (already borrowed from constructor)
+        car1.Borrow();  
+        car1.Borrow();  
+        car3.Borrow();  
 
-        // Test return method
+        
         Console.WriteLine("\nTesting Return Method:");
-        car3.ReturnRentalCar();  // Should succeed
-        car2.ReturnRentalCar();  // Should show not borrowed message
+        car3.ReturnRentalCar();  
+        car2.ReturnRentalCar();  
 
-        // Test price methods
+    
         Console.WriteLine("\nTesting Price Methods:");
         Console.WriteLine($"Car1 price: {car1.CheckPrice()}");
         car1.ChangePrice(80.00);
         Console.WriteLine($"Car1 new price: {car1.CheckPrice()}");
 
-        // Test borrowed status check
+        
         Console.WriteLine("\nTesting Borrowed Status:");
         Console.WriteLine($"Car1 borrowed: {car1.CheckBorrowed()}");
         Console.WriteLine($"Car2 borrowed: {car2.CheckBorrowed()}");
         Console.WriteLine($"Car3 borrowed: {car3.CheckBorrowed()}");
 
-        // Test error handling
+     
         Console.WriteLine("\nTesting Error Handling:");
         try
         {
@@ -68,7 +68,7 @@ namespace oop_assignment_1_2025_75428.Models;
             Console.WriteLine($"Error creating car: {ex.Message}");
         }
 
-        // Final display
+       
         Console.WriteLine("\nFinal Car Details:");
         car1.Display();
         car2.Display();

@@ -11,13 +11,13 @@ namespace oop_assignment_1_2025_75428.Models
     {
         public string RegistrationNumber { get; set; } = string.Empty;
 
-        // Valid body types for validation
+      
         private static readonly HashSet<string> ValidBodyTypes = new HashSet<string>
         {
             "Saloon", "HatchBack", "Convertible", "CrossOver", "MPV"
         };
 
-        // Constructor 1: Takes all 6 parameters
+      
         public RentalCar(string manufacturer, string model, string bodyType,
                         string registrationNumber, double price, bool borrowed)
                         : base(manufacturer, model, bodyType, price)
@@ -33,20 +33,20 @@ namespace oop_assignment_1_2025_75428.Models
             Borrowed = borrowed;
         }
 
-        // Constructor 2: Takes 5 parameters (without borrowed status)
+      
         public RentalCar(string manufacturer, string model, string bodyType,
                         string registrationNumber, double price)
                         : this(manufacturer, model, bodyType, registrationNumber, price, false)
         {
         }
 
-        // Constructor 3: Takes 3 parameters (minimum required)
+        
         public RentalCar(string manufacturer, string model, string bodyType)
                         : this(manufacturer, model, bodyType, "TEMP-REG", 50.0, false)
         {
         }
 
-        // IRentable interface implementation
+      
         public bool Borrow()
         {
             if (!Borrowed)
@@ -89,7 +89,7 @@ namespace oop_assignment_1_2025_75428.Models
             Console.WriteLine($"Price changed to: {newPrice}");
         }
 
-        // Validation method for body type
+        
         private void ValidateBodyType(string bodyType)
         {
             if (!ValidBodyTypes.Contains(bodyType))
@@ -98,7 +98,7 @@ namespace oop_assignment_1_2025_75428.Models
             }
         }
 
-        // Override method from RentalItem base class
+        
         public override void Display()
         {
             Console.WriteLine(new string('*', 50));

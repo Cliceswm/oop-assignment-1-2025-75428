@@ -19,7 +19,7 @@ namespace oop_assignment_1_2025_75428.Models
             if (string.IsNullOrWhiteSpace(manufacturer) ||
                 string.IsNullOrWhiteSpace(model) ||
                 string.IsNullOrWhiteSpace(bodyType) ||
-                price <= 0)
+                price < 0)
             {
                 Console.WriteLine("Invalid parameters provided");
                 throw new ArgumentException("Manufacturer, model, and bodyType cannot be empty, and price must be positive");
